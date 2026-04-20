@@ -5,7 +5,7 @@ import { Package, ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: `url(${bgImg})` }}>
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-no-repeat bg-center" style={{ backgroundImage: `url(${bgImg})` }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative mx-auto max-w-7xl w-full px-4 py-32 lg:px-8 lg:py-20">
