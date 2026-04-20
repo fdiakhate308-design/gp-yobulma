@@ -1,19 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-illustration.jpg";
+import bgImg from "@/assets/bg.jpeg";
 import { Package, ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-primary">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl" />
-      </div>
-
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: `url(${bgImg})` }}>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative mx-auto max-w-7xl w-full px-4 py-32 lg:px-8 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -39,24 +35,6 @@ export default function HeroSection() {
               <Button variant="heroOutline" size="xl">
                 Devenir Groupeur Professionnel
               </Button>
-            </div>
-          </motion.div>
-
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={heroImg}
-                alt="YOBULMA - suivi de colis et livraison"
-                width={1280}
-                height={720}
-                className="w-full h-auto"
-              />
             </div>
           </motion.div>
         </div>
