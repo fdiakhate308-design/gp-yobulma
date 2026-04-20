@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     TanStackRouterVite(),
     TanStackStart({
-      adapter: "@tanstack/start-adapter-netlify"
+      adapter: "netlify"
     }),
     tailwindcss(),
   ],
